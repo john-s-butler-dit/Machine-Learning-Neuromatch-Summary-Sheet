@@ -1,4 +1,4 @@
-\clearpage
+\let\clearpage\relax
 \begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D4_GeneralizedLinearModels/student/W1D4_Tutorial1.html}{Generalized Linear Models (W1D4T1)} }
 \begin{subbox}{subbox}{Create design matrix}
 \scriptsize
@@ -8,7 +8,7 @@ To create the \textbf{design matrix} which organizes the stimulus intensities in
 In this example, we will create the design matrix $\mathbf{X}$ using $d=25$ time lags. That is, $\mathbf{X}$ should be a $T \times d$ matrix. $d = 25$  is a choice we're making based on our prior knowledge of the temporal window that influences RGC responses. 
 
 \centering
-\includegraphics[scale=0.15]{Figures/GLM/GLMFigure1.png}
+\includegraphics[scale=0.13]{Figures/GLM/GLMFigure1.png}
 \end{subbox}
 
 \begin{subbox}{subbox}{Fit Linear-Gaussian regression model 
@@ -20,7 +20,7 @@ In this example, we will create the design matrix $\mathbf{X}$ using $d=25$ time
 \end{align}}
 The resulting maximum likelihood filter estimates are:
 \centering
-\includegraphics[scale=0.22]{Figures/GLM/GLMFigure2.png}
+\includegraphics[scale=0.2]{Figures/GLM/GLMFigure2.png}
 \end{subbox}
 \end{textbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -50,14 +50,14 @@ Because we are going to minimize the negative log likelihood with respect to the
 Finally, don't forget to add the minus sign for your function to return the negative log likelihood.
 
 \centering
-\includegraphics[scale=0.11]{Figures/GLM/GLMFigure3.png}
+\includegraphics[scale=0.1]{Figures/GLM/GLMFigure3.png}
 \end{subbox}
 
 \begin{subbox}{subbox}{Spike Prediction 
 }
 
 \centering
-\includegraphics[scale=0.11]{Figures/GLM/GLMFigure4.png}
+\includegraphics[scale=0.1]{Figures/GLM/GLMFigure4.png}
 \end{subbox}
 \end{textbox}
 \begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D4_GeneralizedLinearModels/student/W1D4_Tutorial2.html}{Generalized Linear Models (W1D4T2)} }
@@ -80,7 +80,7 @@ Here $\sigma()$ is a "squashing" function called the sigmoid function or logisti
 Recall that $z = \theta^T x$. The parameters decide whether $\theta^T x$ will be very negative, in which case $\sigma(\theta^T x)\approx 0$, or very positive, meaning  $\sigma(\theta^T x)\approx 1$.
 
 \centering
-\includegraphics[scale=0.08]{Figures/GLM/GLMFigure5.png}
+\includegraphics[scale=0.07]{Figures/GLM/GLMFigure5.png}
 \end{subbox}
 
 \begin{subbox}{subbox}{Regularisation 
@@ -95,7 +95,8 @@ Regularization comes in different flavors. A very common one uses an $L_2$ or "r
 -\log\mathcal{L}'(\theta | X, y)=
 -\log\mathcal{L}(\theta | X, y) +\frac\beta2\sum_i\theta_i^2,
 \end{align}
-where $\beta$ is a *hyperparameter* that sets the *strength* of the regularization.
+where $\beta$ is a \textit{hyperparameter} that sets the \textit{strength} of the regularization.
+
 \end{subbox}
 \end{textbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
