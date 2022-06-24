@@ -101,7 +101,9 @@ Finally, a set of output weights transforms this 10-dimensional representation i
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{subbox}{subbox}{Representational Dissimilarity matrix (RDM)}
 \scriptsize
-To quantify this, we begin by computing the representational dissimilarity matrix (RDM) for the mouse V1 data and each model layer. This matrix, which we'll call $\mathbf{M}$, is computed as one minus the correlation coefficients between population responses to each stimulus. We can efficiently compute this by using the $z$-scored responses. 
+We noticed above some similarities and differences between the population responses in the mouse primary visual cortex and in different layers in our model. To quantify this we’ll use a technique called Representational Similarity Analysis. The idea is to look at the similarity structure between representations of different stimuli. We can say that a brain area and a model use a similar representational scheme if stimuli that are represented (dis)similarly in the brain are represented (dis)similarly in the model as well.
+
+We begin by computing the representational dissimilarity matrix (RDM) for the mouse V1 data and each model layer. This matrix, which we'll call $\mathbf{M}$, is computed as one minus the correlation coefficients between population responses to each stimulus. We can efficiently compute this by using the $z$-scored responses. 
 
 The $z$-scored response of all neurons $\mathbf{r}$ to stimulus $s$ is the response mean-subtracted across neurons $i$ and normalized to standard deviation 1 across neurons $i$ where $N$ is the total number of neurons:
 \begin{equation}
@@ -116,14 +118,16 @@ Then the full matrix can be computed as:
   \mathbf{M} = 1 - \frac{1}{N} \mathbf{ZZ}^T
 \end{gather}
 where $\mathbf{Z}$ is the z-scored response matrix with rows $\mathbf{r}^{(s)}$ and N is the number of neurons (or units).
+
 \end{subbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{subbox}{subbox}{Determining Representation Similarity}
 \scriptsize
+
 To quantify how similar the representations are, we can simply correlate their dissimilarity matrices. For this, we'll again use the correlation coefficient. Note that dissimilarity matrices are symmetric ($M_{ss'} = M_{s's}$), so we should only use the off-diagonal terms on one side of the diagonal when computing this correlation to avoid overcounting. Moreover, we should leave out the diagonal terms, which are always equal to 0, so will always be perfectly correlated across any pair of RDM's.
 
 \centering
-\includegraphics[scale=0.12]{Figures/DL/DLFigure5.png}
+\includegraphics[scale=0.10]{Figures/DL/DLFigure5.png}
 
 \end{subbox}
 \end{textbox}

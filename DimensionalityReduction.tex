@@ -100,9 +100,9 @@ To reconstruct the data from a low-dimensional approximation, we just have to tr
 \scriptsize
 
 Each eigenvalue describes the variance of the data projected onto its corresponding eigenvector. This is an important concept because it allows us to rank the PCA basis vectors based on how much variance each one can capture in a scree plot.
-
+A scree plot is used to help choose which and how many components to use:
 \centering
-\includegraphics[scale=0.15]{Figures/DM/DMFigure3.png}
+\includegraphics[scale=0.13]{Figures/DM/DMFigure3.png}
 
 \end{subbox}
 
@@ -125,6 +125,14 @@ The intrinsic dimensionality is often quantified by the $K$ necessary to explain
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D5_DimensionalityReduction/student/W1D5_Tutorial4.html}{ Nonlinear Dimensionality Reduction (W1D5T4)} }
+\begin{subbox}{subbox}{Unsupervised Reduction}
+\scriptsize
+
+PCA and t-SNE are unsupervised non-linear dimensionality  reduction methods.
+Nonlinear methods can be more powerful, they can also be sensitive to noise. In contrast, linear methods are useful for their simplicity and robustness.
+Comparing PCA and t-SNE for data visualization. Using t-SNE, we could visualize clusters in the data corresponding to different digits. While PCA was able to separate some clusters (e.g., 0 vs 1), it performed poorly overall.
+However, the results of t-SNE can change depending on the choice of perplexity.
+\end{subbox}
 \begin{subbox}{subbox}{Visualize MNIST in 2D using PCA}
 \scriptsize
 
@@ -139,10 +147,5 @@ The intrinsic dimensionality is often quantified by the $K$ necessary to explain
 \includegraphics[scale=0.15]{Figures/DM/DMFigure6.png}
 
 \end{subbox}
-\begin{subbox}{subbox}{Summary}
-\scriptsize
-Nonlinear methods can be more powerful, they can also be sensitive to noise. In contrast, linear methods are useful for their simplicity and robustness.
-Comparing PCA and t-SNE for data visualization. Using t-SNE, we could visualize clusters in the data corresponding to different digits. While PCA was able to separate some clusters (e.g., 0 vs 1), it performed poorly overall.
-However, the results of t-SNE can change depending on the choice of perplexity. 
-\end{subbox}
+
 \end{textbox}
