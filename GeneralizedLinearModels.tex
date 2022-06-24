@@ -6,9 +6,9 @@
 To create the \textbf{design matrix} which organizes the stimulus intensities in matrix form such that the $i$th row has the stimulus frames preceding timepoint $i$.
 
 In this example, we will create the design matrix $\mathbf{X}$ using $d=25$ time lags. That is, $\mathbf{X}$ should be a $T \times d$ matrix. $d = 25$  is a choice we're making based on our prior knowledge of the temporal window that influences RGC responses. 
-
+Here, spike count is $\mathbf{Y}$ is predicted from out stimulus $\mathbf{X}$,
 \centering
-\includegraphics[scale=0.13]{Figures/GLM/GLMFigure1.png}
+\includegraphics[scale=0.11]{Figures/GLM/GLMFigure1.png}
 \end{subbox}
 
 \begin{subbox}{subbox}{Fit Linear-Gaussian regression model 
@@ -26,7 +26,7 @@ The resulting maximum likelihood filter estimates are:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D4_GeneralizedLinearModels/student/W1D4_Tutorial1.html}{Generalized Linear Models (W1D4T1)} }
-\begin{subbox}{subbox}{Create design matrix}
+\begin{subbox}{subbox}{Poisson regression}
 \scriptsize
 Poisson regression is a generalized linear model form of regression analysis used to model count data, like spikes.
 In the Poisson GLM,
@@ -88,9 +88,8 @@ Recall that $z = \theta^T x$. The parameters decide whether $\theta^T x$ will be
 \scriptsize
 Regularization forces a model to learn a set solutions you a priori believe to be more correct, which reduces over-fitting because it doesn't have as much flexibility to fit idiosyncrasies in the training data. This adds model bias, but it's a good bias because you know (maybe) that parameters should be small or mostly 0.
 
-\textbf{$L_2$ regularization}
+\textbf{$L_2$ regularization}\\
 Regularization comes in different flavors. A very common one uses an $L_2$ or "ridge" penalty. This changes the objective function to
-
 \begin{align}
 -\log\mathcal{L}'(\theta | X, y)=
 -\log\mathcal{L}(\theta | X, y) +\frac\beta2\sum_i\theta_i^2,

@@ -10,10 +10,13 @@ y_{i}= \theta x_{i}+\epsilon_{i}
 \end{equation}
 for some unknown slope parameter $\theta.$ The least squares regression problem uses \textbf{mean squared error (MSE)} as its objective function, it aims to find the value of the parameter $\theta$ by minimizing the average of squared errors:
 \begin{equation}
+\min _{\theta} \frac{1}{N}\sum_{i=1}^{N}\left(\epsilon_{i}\right)^{2}
+\end{equation}
+\begin{equation}
 \min _{\theta} \frac{1}{N}\sum_{i=1}^{N}\left(y_{i}-\theta x_{i}\right)^{2}
 \end{equation}
 \centering
-\includegraphics[scale=0.2]{Figures/ModelFitting/MFFigure1.png}
+\includegraphics[scale=0.15]{Figures/ModelFitting/MFFigure1.png}
 \end{subbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{subbox}{subbox}{Least-Squares Optimization}
