@@ -1,14 +1,16 @@
 \let\clearpage\relax
-\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D4_GeneralizedLinearModels/student/W1D4_Tutorial1.html}{Generalized Linear Models (W1D4T1)} }
+\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D3_GeneralizedLinearModels/student/W1D3_Tutorial1.html}{Generalized Linear Models } }
 \begin{subbox}{subbox}{Create design matrix}
 \scriptsize
 
 To create the \textbf{design matrix} which organizes the stimulus intensities in matrix form such that the $i$th row has the stimulus frames preceding timepoint $i$.
 
 In this example, we will create the design matrix $\mathbf{X}$ using $d=25$ time lags. That is, $\mathbf{X}$ should be a $T \times d$ matrix. $d = 25$  is a choice we're making based on our prior knowledge of the temporal window that influences RGC responses. 
-Here, spike count is $\mathbf{Y}$ is predicted from out stimulus $\mathbf{X}$,
+Here, spike count is $\mathbf{Y}$ is predicted from out stimulus $\mathbf{X}$
+
 \centering
 \includegraphics[scale=0.11]{Figures/GLM/GLMFigure1.png}
+
 \end{subbox}
 
 \begin{subbox}{subbox}{Fit Linear-Gaussian regression model 
@@ -25,7 +27,7 @@ The resulting maximum likelihood filter estimates are:
 \end{textbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D4_GeneralizedLinearModels/student/W1D4_Tutorial1.html}{Generalized Linear Models (W1D4T1)} }
+\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D3_GeneralizedLinearModels/student/W1D3_Tutorial1.html}{Generalized Linear Models } }
 \begin{subbox}{subbox}{Poisson regression}
 \scriptsize
 Poisson regression is a generalized linear model form of regression analysis used to model count data, like spikes.
@@ -60,7 +62,7 @@ Finally, don't forget to add the minus sign for your function to return the nega
 \includegraphics[scale=0.1]{Figures/GLM/GLMFigure4.png}
 \end{subbox}
 \end{textbox}
-\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D4_GeneralizedLinearModels/student/W1D4_Tutorial2.html}{Generalized Linear Models (W1D4T2)} }
+\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D3_GeneralizedLinearModels/student/W1D3_Tutorial2.html}{Generalized Linear Models } }
 \begin{subbox}{subbox}{Logistic regression}
 \scriptsize
 Logistic Regression is a binary classification model. It is a GLM with a logistic link function and a Bernoulli (i.e. coinflip) noise model.

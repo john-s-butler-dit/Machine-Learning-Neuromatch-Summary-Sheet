@@ -1,6 +1,6 @@
 \let\clearpage\relax
 
-\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D5_DimensionalityReduction/student/W1D5_Tutorial1.html}{Dimensionality Reduction (W1D5T1)} }
+\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D4_DimensionalityReduction/student/W1D4_Tutorial1.html}{Dimensionality Reduction } }
 \begin{subbox}{subbox}{Generate Correlated Multivariate Data}
 \scriptsize
  Multivariate data can be visualized as a cloud of points in a high-dimensional vector space. The geometry of this cloud is shaped by the covariance matrix.
@@ -46,7 +46,7 @@ Two vectors are orthonormal if:
 \end{textbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D5_DimensionalityReduction/student/W1D5_Tutorial2.html}{Principal Component Analysis (W1D5T2)} }
+\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D4_DimensionalityReduction/student/W1D4_Tutorial2.html}{Principal Component Analysis } }
 \begin{subbox}{subbox}{Eigenvectors of the Sample Covariance Matrix}
 \scriptsize
 PCA represents data in a new orthonormal basis defined by the eigenvectors of the covariance matrix. The bivariate normal data with a specified covariance matrix $\bf \Sigma$, whose $(i,j)$th element is:
@@ -73,7 +73,7 @@ where $\bf X$ is the full data matrix (each column of $\bf X$ is a different $\b
 \end{textbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D5_DimensionalityReduction/student/W1D5_Tutorial2.html}{Principal Component Analysis (W1D5T2)} }
+\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D4_DimensionalityReduction/student/W1D4_Tutorial2.html}{Principal Component Analysis } }
 
 \begin{subbox}{subbox}{PCA by projecting data onto the eigenvectors
 }
@@ -95,12 +95,13 @@ To reconstruct the data from a low-dimensional approximation, we just have to tr
 \end{textbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D5_DimensionalityReduction/student/W1D5_Tutorial3.html}{Dimensionality Reduction \& Reconstruction (W1D5T3)} }
+\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D4_DimensionalityReduction/student/W1D4_Tutorial3.html}{Dimensionality Reduction \& Reconstruction } }
 \begin{subbox}{subbox}{Scree Plot}
 \scriptsize
 
 Each eigenvalue describes the variance of the data projected onto its corresponding eigenvector. This is an important concept because it allows us to rank the PCA basis vectors based on how much variance each one can capture in a scree plot.
 A scree plot is used to help choose which and how many components to use:
+
 \centering
 \includegraphics[scale=0.13]{Figures/DM/DMFigure3.png}
 
@@ -124,7 +125,7 @@ The intrinsic dimensionality is often quantified by the $K$ necessary to explain
 \end{textbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D5_DimensionalityReduction/student/W1D5_Tutorial4.html}{ Nonlinear Dimensionality Reduction (W1D5T4)} }
+\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D4_DimensionalityReduction/student/W1D4_Tutorial4.html}{ Nonlinear Dimensionality Reduction } }
 \begin{subbox}{subbox}{Unsupervised Reduction}
 \scriptsize
 
@@ -132,6 +133,7 @@ PCA and t-SNE are unsupervised non-linear dimensionality  reduction methods.
 Nonlinear methods can be more powerful, they can also be sensitive to noise. In contrast, linear methods are useful for their simplicity and robustness.
 Comparing PCA and t-SNE for data visualization. Using t-SNE, we could visualize clusters in the data corresponding to different digits. While PCA was able to separate some clusters (e.g., 0 vs 1), it performed poorly overall.
 However, the results of t-SNE can change depending on the choice of perplexity.
+
 \end{subbox}
 \begin{subbox}{subbox}{Visualize MNIST in 2D using PCA}
 \scriptsize
