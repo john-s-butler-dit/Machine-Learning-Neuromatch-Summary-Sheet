@@ -1,5 +1,5 @@
 \let\clearpage\relax
-\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D4_GeneralizedLinearModels/student/W1D4_Tutorial1.html}{Generalized Linear Models (W1D4T1)} }
+\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D3_GeneralizedLinearModels/student/W1D3_Tutorial1.html}{Generalized Linear Models } }
 \begin{subbox}{subbox}{Create design matrix}
 \scriptsize
 
@@ -25,7 +25,7 @@ The resulting maximum likelihood filter estimates are:
 \end{textbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D4_GeneralizedLinearModels/student/W1D4_Tutorial1.html}{Generalized Linear Models (W1D4T1)} }
+\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D3_GeneralizedLinearModels/student/W1D3_Tutorial1.html}{Generalized Linear Models } }
 \begin{subbox}{subbox}{Poisson regression}
 \scriptsize
 Poisson regression is a generalized linear model form of regression analysis used to model count data, like spikes.
@@ -60,7 +60,9 @@ Finally, don't forget to add the minus sign for your function to return the nega
 \includegraphics[scale=0.1]{Figures/GLM/GLMFigure4.png}
 \end{subbox}
 \end{textbox}
-\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D4_GeneralizedLinearModels/student/W1D4_Tutorial2.html}{Generalized Linear Models (W1D4T2)} }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D3_GeneralizedLinearModels/student/W1D3_Tutorial2.html}{Generalized Linear Models } }
 \begin{subbox}{subbox}{Logistic regression}
 \scriptsize
 Logistic Regression is a binary classification model. It is a GLM with a logistic link function and a Bernoulli (i.e. coinflip) noise model.
@@ -97,4 +99,46 @@ Regularization comes in different flavors. A very common one uses an $L_2$ or "r
 where $\beta$ is a \textit{hyperparameter} that sets the \textit{strength} of the regularization.
 
 \end{subbox}
+
+\end{textbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{textbox}{\href{https://compneuro.neuromatch.io/tutorials/W1D3_GeneralizedLinearModels/student/W1D3_Tutorial2.html}{Generalized Linear Models } }
+\begin{subbox}{subbox}{Logistic regression}
+\scriptsize
+Logistic Regression is a binary classification model. It is a GLM with a logistic link function and a Bernoulli (i.e. coinflip) noise model.
+The fundamental input/output equation of logistic regression is:
+
+\begin{align}
+\hat{y} \equiv p(y=1|x,\theta) = \sigma(\theta^Tx)
+\end{align}
+
+Note that we interpret the output of logistic regression, $\hat{y}$, as the probability that $y = 1$ given inputs $x$ and parameters $\theta$.
+
+Here $\sigma()$ is a "squashing" function called the sigmoid function or logistic function. Its output is in the range $0 \leq y \leq 1$. It looks like this:
+
+\begin{align}
+\sigma(z) = \frac{1}{1 + \textrm{exp}(-z)}
+\end{align}
+Recall that $z = \theta^T x$. The parameters decide whether $\theta^T x$ will be very negative, in which case $\sigma(\theta^T x)\approx 0$, or very positive, meaning  $\sigma(\theta^T x)\approx 1$.
+
+\centering
+\includegraphics[scale=0.07]{Figures/GLM/GLMFigure5.png}
+\end{subbox}
+
+\begin{subbox}{subbox}{Regularisation 
+}
+\scriptsize
+Regularization forces a model to learn a set solutions you a priori believe to be more correct, which reduces over-fitting because it doesn't have as much flexibility to fit idiosyncrasies in the training data. This adds model bias, but it's a good bias because you know (maybe) that parameters should be small or mostly 0.
+
+\textbf{$L_2$ regularization}\\
+Regularization comes in different flavors. A very common one uses an $L_2$ or "ridge" penalty. This changes the objective function to
+\begin{align}
+-\log\mathcal{L}'(\theta | X, y)=
+-\log\mathcal{L}(\theta | X, y) +\frac\beta2\sum_i\theta_i^2,
+\end{align}
+where $\beta$ is a \textit{hyperparameter} that sets the \textit{strength} of the regularization.
+
+\end{subbox}
+
 \end{textbox}
