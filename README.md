@@ -6,6 +6,9 @@ The code is divided by day:
 + Generalized Linear Models (W1D3)
 + Dimensionality Reduction (W1D4)
 + Deep Learning (W1D5)
+with the figures in the FIGURES folder.
+
+All code was written using Overleaf.
 
 ![W1D3_GLM](W1D3_GLM.png)
 
