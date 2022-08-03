@@ -1,6 +1,11 @@
 # Latex Code for Neuromatch Machine Learning Summary Sheet
 
-This repository contains the latex code to generate the Summary Sheets for the Machine Learning Days for [Neuromatch Academy Compuational Neuroscience Summer School 2022](https://compneuro.neuromatch.io/tutorials/intro.html)
+This repository contains the latex code to generate the Machine Learning Summary Sheets for [Neuromatch Academy Compuational Neuroscience Summer School 2022](https://compneuro.neuromatch.io/tutorials/intro.html)
+
+The code is divided by day:
++ Generalized Linear Models (W1D3)
++ Dimensionality Reduction (W1D4)
++ Deep Learning (W1D5)
 
 ![W1D3_GLM](W1D3_GLM.png)
 
