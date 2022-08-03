@@ -1,4 +1,4 @@
-# Latex code Neuromatch Machine Learning Summary Sheet
+# Latex Code for Neuromatch Machine Learning Summary Sheet
 
 This repository contains the latex code to generate the Summary Sheets for the Machine Learning Days for [Neuromatch Academy Compuational Neuroscience Summer School 2022](https://compneuro.neuromatch.io/tutorials/intro.html)
 
